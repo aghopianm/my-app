@@ -1,15 +1,28 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { useSelector } from "react-redux";
 
 const Recipes = () => {
+  const loginStreak = useSelector((state: any) => state.login.loginStreak);
+
   return (
     <Container>
       <Content>
         <Title>Recipes</Title>
-        <Subtitle>Fuel your body with nutritious meals.</Subtitle>
+        <Subtitle>Fuel your body. Stay healthy. Enjoy your meals.</Subtitle>
+        <StreakMessage>
+          {loginStreak > 0 ? `🔥 Your login streak: ${loginStreak} days!` : "Start your healthy eating journey today!"}
+        </StreakMessage>
         <RecipeList>
-          <RecipeItem>🥑 Avocado Toast</RecipeItem>
-          <RecipeItem>🍗 Grilled Chicken Salad</RecipeItem>
-          <RecipeItem>🍓 Protein Smoothie</RecipeItem>
+          <RecipeItem>
+            <StyledLink to="/recipes/breakfast">🍳 Breakfast Recipes</StyledLink>
+          </RecipeItem>
+          <RecipeItem>
+            <StyledLink to="/recipes/lunch">🥗 Lunch Recipes</StyledLink>
+          </RecipeItem>
+          <RecipeItem>
+            <StyledLink to="/recipes/dinner">🍲 Dinner Recipes</StyledLink>
+          </RecipeItem>
         </RecipeList>
       </Content>
     </Container>
@@ -28,7 +41,7 @@ const Container = styled.div`
 `;
 
 const Content = styled.div`
-  background: rgba(46, 204, 113, 0.85);
+  background: rgba(255, 165, 0, 0.85);
   color: white;
   padding: 40px;
   border-radius: 10px;
@@ -38,12 +51,26 @@ const Content = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 28px;
-  margin-bottom: 10px;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 `;
 
 const Subtitle = styled.p`
   font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: white;
+`;
+
+const StreakMessage = styled.p`
+  font-size: 16px;
+  font-weight: bold;
+  color: yellow;
   margin-bottom: 20px;
 `;
 
@@ -56,4 +83,14 @@ const RecipeItem = styled.li`
   font-size: 18px;
   margin-top: 10px;
   font-weight: bold;
+`;
+
+const StyledLink = styled(Link)`
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+
+  &:hover {
+    color: yellow;
+  }
 `;

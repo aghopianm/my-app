@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { useSelector } from "react-redux";
 
@@ -13,9 +14,15 @@ const Workouts = () => {
           {loginStreak > 0 ? `🔥 Your login streak: ${loginStreak} days!` : "Start your fitness journey today!"}
         </StreakMessage>
         <WorkoutList>
-          <WorkoutItem>🏋️ Strength Training</WorkoutItem>
-          <WorkoutItem>🏃 Cardio & Endurance</WorkoutItem>
-          <WorkoutItem>🧘 Flexibility & Mobility</WorkoutItem>
+          <WorkoutItem>
+            <StyledLink to="/workouts/strength">🏋️ Strength Training</StyledLink>
+          </WorkoutItem>
+          <WorkoutItem>
+            <StyledLink to="/workouts/cardio">🏃 Cardio & Endurance</StyledLink>
+          </WorkoutItem>
+          <WorkoutItem>
+            <StyledLink to="/workouts/flexibility">🧘 Flexibility & Mobility</StyledLink>
+          </WorkoutItem>
         </WorkoutList>
       </Content>
     </Container>
@@ -43,22 +50,6 @@ const Content = styled.div`
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 `;
 
-const Title = styled.h1`
-  font-size: 28px;
-  margin-bottom: 10px;
-`;
-
-const Subtitle = styled.p`
-  font-size: 18px;
-  margin-bottom: 20px;
-`;
-
-const StreakMessage = styled.p`
-  font-size: 16px;
-  font-weight: bold;
-  margin-top: 20px;
-`;
-
 const WorkoutList = styled.ul`
   list-style: none;
   padding: 0;
@@ -68,4 +59,40 @@ const WorkoutItem = styled.li`
   font-size: 18px;
   margin-top: 10px;
   font-weight: bold;
+`;
+
+const StyledLink = styled(Link)`
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+
+  &:hover {
+    color: yellow;
+  }
+`;
+
+const Subtitle = styled.p`
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  text-decoration: none; /* Ensure no underline */
+  color: white;
+`;
+
+const StreakMessage = styled.p`
+  font-size: 16px;
+  font-weight: bold;
+  color: yellow;
+  margin-bottom: 20px;
+  text-decoration: none; /* Ensure no underline */
+`;
+
+const Title = styled.h1`
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 `;
