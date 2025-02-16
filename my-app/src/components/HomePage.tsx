@@ -31,7 +31,7 @@ const Container = styled.div`
 `;
 
 const Content = styled.div`
-  background: linear-gradient(135deg, rgba(0, 123, 255, 0.85), rgba(0, 180, 219, 0.85));
+  background: linear-gradient(135deg, rgba(221, 0, 255, 0.85), rgba(0, 180, 219, 0.85));
   color: white;
   padding: 40px;
   border-radius: 10px;
