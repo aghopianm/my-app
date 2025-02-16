@@ -10,6 +10,7 @@ const Cardio = () => {
           <WorkoutItem>🏃‍♂️ Running</WorkoutItem>
           <WorkoutItem>🚴 Cycling</WorkoutItem>
           <WorkoutItem>🛶 Rowing</WorkoutItem>
+          <WorkoutItem>Walking</WorkoutItem>
         </WorkoutList>
       </Content>
     </Container>
