@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./components/HomePage";
+import Workouts from "./components/Workouts";
+import Recipes from "./components/Recipes";
 import NavBar from "./components/NavBar";
 
 function App() {
@@ -8,8 +10,8 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/workouts" element={<div>Workouts Page (To Be Created)</div>} />
-        <Route path="/recipes" element={<div>Recipes Page (To Be Created)</div>} />
+        <Route path="/workouts" element={<Workouts />} />
+        <Route path="/recipes" element={<Recipes />} />
       </Routes>
     </Router>
   );
