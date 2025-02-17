@@ -15,13 +15,13 @@ const Workouts = () => {
         </StreakMessage>
         <WorkoutList>
           <WorkoutItem>
-            <StyledLink to="/workouts/strength">🏋️ Strength Training</StyledLink>
+            <StyledLink to="/workouts/StrengthTraining">🏋️ Strength Training</StyledLink>
           </WorkoutItem>
           <WorkoutItem>
-            <StyledLink to="/workouts/cardio">🏃 Cardio & Endurance</StyledLink>
+            <StyledLink to="/workouts/Cardio">🏃 Cardio & Endurance</StyledLink>
           </WorkoutItem>
           <WorkoutItem>
-            <StyledLink to="/workouts/flexibility">🧘 Flexibility & Mobility</StyledLink>
+            <StyledLink to="/workouts/Flexibility">🧘 Flexibility & Mobility</StyledLink>
           </WorkoutItem>
         </WorkoutList>
       </Content>

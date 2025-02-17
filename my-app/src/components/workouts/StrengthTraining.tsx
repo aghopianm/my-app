@@ -23,8 +23,8 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background: url("https://source.unsplash.com/1600x900/?gym,lifting") no-repeat center center/cover;
+  height: 100vh; /* Fill the screen height */
+  background: url("https://source.unsplash.com/1600x900/?gym,lifting") no-repeat center center/cover; /* Background image */
 `;
 
 const Content = styled.div`

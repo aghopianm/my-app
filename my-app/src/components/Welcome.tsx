@@ -5,7 +5,7 @@ import LoginButton from "./LoginButton"; // Import LoginButton
 import ResetButton from "./ResetButton"; // Import ResetButton
 import styled from "styled-components";
 
-const Welcome = () => {
+const Welcome = ({ customStyle }) => {
   const dispatch = useDispatch();
   const loginStreak = useSelector((state) => state.login.loginStreak);
   const lastLogin = useSelector((state) => state.login.lastLogin);
@@ -30,7 +30,7 @@ const Welcome = () => {
   }, [dispatch]);
 
   return (
-    <Container>
+    <Container style={customStyle}>
       <Heading>Welcome to Your Fitness Tracker</Heading>
       <Paragraph>
         Your current login streak: <strong>{loginStreak}</strong> days

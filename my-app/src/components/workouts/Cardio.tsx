@@ -5,12 +5,11 @@ const Cardio = () => {
     <Container>
       <Content>
         <Title>🏃 Cardio & Endurance</Title>
-        <Subtitle>Improve heart health and stamina.</Subtitle>
+        <Subtitle>Boost your heart health and stamina.</Subtitle>
         <WorkoutList>
           <WorkoutItem>🏃‍♂️ Running</WorkoutItem>
           <WorkoutItem>🚴 Cycling</WorkoutItem>
-          <WorkoutItem>🛶 Rowing</WorkoutItem>
-          <WorkoutItem>Walking</WorkoutItem>
+          <WorkoutItem>🏊 Swimming</WorkoutItem>
         </WorkoutList>
       </Content>
     </Container>
@@ -24,17 +23,18 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background: url("https://source.unsplash.com/1600x900/?running,fitness") no-repeat center center/cover;
+  min-height: 100vh; 
+  background: url("https://source.unsplash.com/1600x900/?cardio") no-repeat center center/cover; /* Background image */
 `;
 
 const Content = styled.div`
-  background: rgba(231, 76, 60, 0.85);
+  background: rgba(52, 73, 94, 0.85);
   color: white;
   padding: 40px;
   border-radius: 10px;
   text-align: center;
-  max-width: 500px;
+  width: 100%
+  
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 `;
 

@@ -30,7 +30,7 @@ const NavBar = () => {
 export default NavBar;
 // Styled Components
 const Nav = styled.nav`
-  background:rgba(76, 0, 255, 0.77);
+  background:rgba(0, 0, 0, 0.87);
   padding: 15px;
   display: flex;
   justify-content: space-between; // Changed from center to space-between
