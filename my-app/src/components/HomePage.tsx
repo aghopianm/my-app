@@ -10,12 +10,9 @@ const HomePage = () => {
     <Container>
       <Content>
         <Title>Welcome to Your Fitness App!</Title>
-        {loginStreak > 0 && (
-          <StreakMessage>
-            🔥 Your login streak: {loginStreak} days!
-          </StreakMessage>
-        )}
-        <Welcome customStyle={{padding: '20px', backgroundColor: '#E0FFFF', color: '#fff'}}/>
+        
+        <Welcome customStyle={{padding: '20px', backgroundColor: '#E0FFFF', color: '#fff'}}
+        />
         
       </Content>
     </Container>

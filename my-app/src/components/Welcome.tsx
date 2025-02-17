@@ -33,7 +33,10 @@ const Welcome = ({ customStyle }) => {
     <Container style={customStyle}>
       <Heading>Welcome to Your Fitness Tracker</Heading>
       <Paragraph>
-        Your current login streak: <strong>{loginStreak}</strong> days
+      🔥 Your current login streak: <strong>{loginStreak}</strong> days
+      </Paragraph>
+      <Paragraph>
+        Your last login was on: <strong>{lastLogin ? lastLogin.toLocaleDateString() : "Never"}</strong>
       </Paragraph>
       <Paragraph>Track your daily progress below:</Paragraph>
 
